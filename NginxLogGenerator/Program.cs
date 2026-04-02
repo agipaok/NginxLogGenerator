@@ -39,7 +39,7 @@
 
             foreach (var entry in entries)
             {
-                await writer.WriteLineAsync($"{entry.Id},{entry.Epoch},{entry.RemoteIpAddress},{entry.RemoteUser},{entry.Timestamp},{entry.RequestPath},{entry.StatusCode},{entry.BytesSent}");
+                await writer.WriteLineAsync($"{entry.Id},{entry.Epoch},{entry.RemoteIpAddress},{entry.RemoteUser},{entry.Timestamp:yyyy-MM-dd HH:mm:ss.fffffff zzz},{entry.RequestPath},{entry.StatusCode},{entry.BytesSent}");
             }
 
             Console.WriteLine($"Δημιουργήθηκαν {entries.Count} εγγραφές στο {filename}");
